@@ -1,0 +1,61 @@
+{% extends "layout.html" %} {% block title %} Set {% endblock %} {% block main %}
+
+{% block additional_styles %}
+<link href="/static/css/set.css" rel="stylesheet" />
+{% endblock %}
+
+
+
+<div class="p-4 bg-white rounded-lg w-full max-w-lg mb-4">
+  <div class="sm:flex gap-4 items-center">
+    <div clas="flex">
+      <img id="set-logo" src="/images/person/1.jpg" class="w-56"/>
+    </div>
+    <div class="w-full max-w-sm">
+      <div class="mb-2">
+        <p id="set-name" class="text-xl font-medium text-gray-800">
+          John Jackson
+        </p>
+        <p class="text-xs text-gray-400">
+          <span id="series-name"></span> series
+        </p>
+      </div>
+      <div class="w-full p-2 bg-blue-100 rounded-lg">
+        <div class="justify-between text-xs text-gray-400">
+          <p class="flex flex-col">
+            Released on
+            <span id="release-date" class="font-bold text-black">
+              34
+            </span>
+          </p>
+          <p class="flex flex-col">
+            Total cards
+            <span id="cards-count" class="font-bold text-black">
+              455
+            </span>
+          </p>
+          <p class="flex flex-col">
+            Cards collected
+            <span class="font-bold text-black">
+              0
+            </span>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="w-full h-4 bg-gray-400 rounded-lg mt-3">
+    <div class="w-3/4 h-full text-center text-xs text-white bg-blue-500 rounded-lg">
+      75%
+    </div>
+  </div>
+</div>
+
+<div id="cards-container" class="flex flex-wrap gap-2 justify-between"></div>
+
+{% block additional_scripts %}
+<script src="/static/js/set.js"></script>
+{% endblock %}
+
+{% endblock %}

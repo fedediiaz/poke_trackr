@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <link href="/static/favicon.ico" rel="icon" />
+  <link href="/static/css/global.css" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>PokeTrackr - {% block title %}{% endblock %}</title>
+  <style type="text/tailwindcss"></style>
+  {% block additional_styles %}
+    <!-- Common styles go here -->
+  {% endblock %}
+</head>
+
+<body class="bg-gray-100">
+  
+  {% include 'header.html' %}
+
+  <main class="p-2">{% block main %}{% endblock %}</main>
+
+  {% include 'footer.html' %}
+
+  <script src="/static/js/header.js"></script>
+  {% block additional_scripts %}
+        <!-- Common scripts go here -->
+  {% endblock %}
+</body>
+
+</html>

@@ -1,0 +1,36 @@
+{% extends "layout.html" %} {% block title %} Card {% endblock %} {% block main %}
+
+{% block additional_styles %}
+<link href="/static/css/card.css" rel="stylesheet" />
+{% endblock %}
+
+
+<div class="flex gap-4">
+  <div id="card-image">
+    <img id="card-img" src="" alt="Card Image">
+  </div>
+  <div class="w-full">
+    <div id="dynamicTable" class="grid grid-cols-2 rounded-lg border border-gray-200 overflow-hidden">
+      <!-- Table Header -->
+      <div class="col-span-2 border-b p-2 grid grid-cols-2 pr-8 bg-blue-200">
+          <span class="font-semibold">Variant</span>
+          <span class="font-semibold text-right">Quantity</span>
+      </div>
+    
+      <!-- Dynamic Content -->
+      <div class="col-span-2">
+          <!-- Variant Rows -->
+          <div id="variantsContainer"></div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
+
+{% block additional_scripts %}
+<script src="/static/js/card.js"></script>
+{% endblock %}
+
+{% endblock %}
