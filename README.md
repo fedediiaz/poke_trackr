@@ -3,19 +3,79 @@
 #### Description:
 
 ## Project Description
-This project is your go-to companion for effortlessly managing and keeping tabs on your expanding Pokémon card collection. Picture it as your sidekick, specially crafted for the grand finale of the CS50 course. We've crafted an intuitive and user-friendly experience, ensuring you can seamlessly organize and monitor your Pokémon cards. The secret sauce? The TGC Dex card database, which provides an extensive list of cards for you to explore and enjoy.
+This project is like your trusty sidekick for managing and keeping track of all your Pokémon cards. Think of it as the ultimate tool designed for the final stretch of the CS50 course. We've made sure it's super user-friendly, allowing you to effortlessly sort and watch over your growing Pokémon card collection. Plus, it's got all the details you need, thanks to the TGC Dex card database.
 
-Behind the scenes, we've employed MYSQL Workbench to create a robust database, the unsung hero that powers the entire operation. Adding a dash of style is TailwindCSS, a tool I've sworn by for years, bringing a material design aesthetic to the components (even though we admit there might be a bit of inconsistency).
+We've worked some behind-the-scenes magic using MYSQL Workbench to set up the database. It's the digital brain that helps everything run smoothly. TailwindCSS, a tool I've been a fan of for years, adds a touch of style with a material design flair, though I'll admit, we're still working on nailing down that consistent look.
 
-What sets this project apart is its commitment to user engagement and progress tracking. Imagine being able to check in on your cards, monitor your completion status, and gain valuable insights into your collection. It's not just a project; it's an indispensable tool for Pokémon card enthusiasts. Whether you're stepping into the captivating world of Pokémon Trading Card Game (TCG) for the first time or seeking a sophisticated solution for managing an extensive collection, this project stands as a testament to the fusion of technology and passion in the realm of Pokémon card collecting. It's our way of making your Pokémon journey even more exciting and tech-savvy.
+What makes this project special is how it keeps you in the loop about your cards. You can easily check in on them, see how close you are to completing your collection, and get some insights into your card-collecting journey. It's a must-have for Pokémon card fans, whether you're just starting with the Trading Card Game or you're a seasoned collector. This project is our way of blending tech and passion to make Pokémon card collecting even more awesome.
 
-Features:
+## Features:
 - User registration system
 - Lists cards from [TGC Dex](https://github.com/tcgdex/cards-database)
 - Database was design using MYSQL Workbench and adapted for this course
 - Users can keep track of their cards and progress
 
-How to Run the Project
+## Project structure
+```
+poke_trackr/
+│
+├── app/
+│   ├── __init__.py
+│   ├── routes.py
+│   └── models.py
+│
+├── templates/
+│   ├── index.html
+│   ├── login.html
+│   ├── layout.html
+│   └── ...
+│
+├── static/
+│   ├── js/
+│   ├── img/
+│   └── css/
+│
+├── run.py
+├── README.md
+├── requirements.txt
+├── instance/
+│   └── poke_trackr.db
+│
+├── .gitignore
+├── .flaskenv
+└── .venv/
+```
+
+## Project files description
+- app/
+    - __init__.py: Initializes the Flask module.
+    - routes.py: Defines the routes and controllers for handling HTTP requests.
+    - models.py: Contains the SQLAlchemy models for database tables.
+
+- templates/
+    - Contains all the HTML files 
+
+- static/
+    - Javascript and CSS files are store here together with images.
+
+- run.py: Script to run the Flask application.
+
+- README.md: Documentation providing information about the project, its structure, and usage.
+
+- requirements.txt: List of Python dependencies for the project.
+
+- instance/
+    - poke_trackr.db: Database file.
+
+- .gitignore: Specifies files and directories to be ignored by Git.
+
+- .flaskenv: Configuration file for Flask environment variables.
+
+- .venv/: Virtual environment directory.
+
+
+
+## How to Run the Project
 Important note: this project uses python 3.9 as a base.
 
 1. **Clone the Repository:**
