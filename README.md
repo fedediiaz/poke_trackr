@@ -15,7 +15,7 @@ Features:
 - Database was design using MYSQL Workbench and adapted for this course
 - Users can keep track of their cards and progress
 
-## How to Run the Project
+How to Run the Project
 Important note: this project uses python 3.9 as a base.
 
 1. **Clone the Repository:**
