@@ -3,7 +3,11 @@
 #### Description:
 
 ## Project Description
-This project serves as a comprehensive solution for managing and tracking your Pokémon cards, designed as a final project for the CS50 course. With a user-friendly registration system, it enables users to seamlessly organize and monitor their Pokémon card collection. Leveraging data from the TGC Dex card database, the application offers an extensive list of cards for users to explore. The underlying database structure was initially designed using MYSQL Workbench and has been meticulously adapted for integration into this course project. Users can conveniently keep tabs on their cards and monitor their progress, making it a valuable tool for Pokémon card enthusiasts.
+This project is like your trusty sidekick for managing and keeping track of all your Pokémon cards. Think of it as the ultimate tool designed for the final stretch of the CS50 course. We've made sure it's super user-friendly, allowing you to effortlessly sort and watch over your growing Pokémon card collection. Plus, it's got all the details you need, thanks to the TGC Dex card database.
+
+We've worked some behind-the-scenes magic using MYSQL Workbench to set up the database. It's the digital brain that helps everything run smoothly. TailwindCSS, a tool I've been a fan of for years, adds a touch of style with a material design flair, though I'll admit, we're still working on nailing down that consistent look.
+
+What makes this project special is how it keeps you in the loop about your cards. You can easily check in on them, see how close you are to completing your collection, and get some insights into your card-collecting journey. It's a must-have for Pokémon card fans, whether you're just starting with the Trading Card Game or you're a seasoned collector. This project is our way of blending tech and passion to make Pokémon card collecting even more awesome.
 
 Features:
 - User registration system
