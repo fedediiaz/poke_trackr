@@ -29,8 +29,6 @@ def update_user_card():
             condition=condition
         ).first()
 
-
-        
         if user_card:
             print('we found user card', user_card)
             user_card.quantity = quantity
@@ -75,21 +73,28 @@ def get_user_card():
     card_id = request.args.get('card_id')
     set_id = request.args.get('set_id')
 
-    cards = UserCard.query.filter(
-        UserCard.user_id == current_user.user_id,
-        UserCard.card_id == card_id,
-        UserCard.set_id == set_id
-    ).all()
+    query_filters = [
+        UserCard.user_id == current_user.user_id
+    ]
+
+    if card_id is not None and set_id is not None:
+        # Both card_id and set_id are provided
+        query_filters.append(UserCard.card_id == card_id)
+        query_filters.append(UserCard.set_id == set_id)
+    elif set_id is not None:
+        # Only set_id is provided
+        query_filters.append(UserCard.set_id == set_id)
+
+    cards = UserCard.query.filter(*query_filters).all()
 
     response = {
-            'status': 'success',
-            'message': '',
-            'data': {
-                'cards': [card.serialize() for card in cards]
-            }
+        'status': 'success',
+        'message': '',
+        'data': {
+            'cards': [card.serialize() for card in cards]
         }
-    return jsonify(response), 200
-    
+    }
+    return jsonify(response), 200    
 
 @app.route('/')
 def home():

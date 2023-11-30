@@ -6,7 +6,6 @@ const queryParams = new URLSearchParams();
 queryParams.append('card_id', cardId);
 queryParams.append('set_id', setId);
 
-
 const userData = fetch(`/user_card?${queryParams.toString()}`, {
     method: 'GET',
     headers: {
